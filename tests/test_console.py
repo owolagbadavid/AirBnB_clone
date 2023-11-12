@@ -14,7 +14,7 @@ import os
 class TestConsoleClass(unittest.TestCase):
     """TestConsoleClass resume
     Args:
-        unittest (): Propertys for unit testing
+        unittest (): arg for unit testing
     """
 
     maxDiff = None
@@ -449,6 +449,7 @@ class TestConsoleClass(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as val:
             HBNBCommand().onecmd("User.show(\"" + user_id + "\")")
             self.assertTrue("John" in val.getvalue())
+
 
 if __name__ == '__main__':
     unittest.main()
